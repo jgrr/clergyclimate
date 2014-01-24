@@ -1,0 +1,23 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+rewritecond %{http_host} ^clergyletter.com$ [nc]
+rewriterule ^(.*)$ http://www.clergyletter.com/$1 [r=301,l]
+
+RewriteCond %{HTTP_HOST} ^clergyletter.org [NC]
+RewriteRule ^(.*)$ http://www.clergyletter.com/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www.clergyletter.org [NC]
+RewriteRule ^(.*)$ http://www.clergyletter.com/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^clergyletter.org [NC]
+RewriteRule ^(.*)$ http://www.clergyletter.com/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www.clergyletter.org [NC]
+RewriteRule ^(.*)$ http://www.clergyletter.com/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^clergyletter.com [NC]
+RewriteRule ^(.*)$ http://www.clergyletter.com/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www.clergyletter.com [NC]
+RewriteRule ^(.*)$ http://www.clergyletter.com/$1 [L,R=301]
